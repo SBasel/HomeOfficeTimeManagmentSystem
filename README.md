@@ -12,7 +12,7 @@
 
 ### Frontend
 
-- [React](https://reactjs.org/)
+- [React](https://vitejs.dev//)
 - [React-DOM](https://reactjs.org/docs/react-dom.html)
 - [React-Router-DOM](https://reactrouter.com/)
 - [Axios](https://axios-http.com/)
@@ -50,10 +50,10 @@ PASSWORD: {DEIN_PASSWORT}
 
 HomeOfficeTimeManagmentSystem.sql in MySQL Importieren
 
-Die app.use("/add", add); kann in Postman genutz werden um einen
+Die app.use("/add", add); kann man in z.b Postman nutzen um einen
 Mitarbeiter zuerstellen.
 
-http://localhost:3000/add
+GET http://localhost:3000/add
 
 {
 "vorname": "Max",
