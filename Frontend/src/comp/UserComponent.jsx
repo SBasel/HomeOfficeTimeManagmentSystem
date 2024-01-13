@@ -28,19 +28,33 @@ const UserComponent = () => {
     }
   };
 
-  const handleOverviewClick = () => {
-    setShowOverview(true);
+   const handleOverviewClick = () => {
+    setShowOverview(prevShowOverview => !prevShowOverview);
   };
 
 
-   return (
+const handleLogoutClick = async () => {
+  try {
+    const response = await axios.get('http://localhost:3000/logout', {
+      withCredentials: true
+    });
+    setMessage(response.data.message);
+    // Neuladen der Seite nach erfolgreichem Logout
+    window.location.reload();
+  } catch (error) {
+    setMessage(error.response ? error.response.data.message : 'Fehler beim Abmelden');
+  }
+};
+
+  return (
     <div>
       <button onClick={handleStartClick}>Start</button>
       <button onClick={handleStopClick}>Stop</button>
       <button onClick={handleOverviewClick}>Übersicht</button>
+      <button onClick={handleLogoutClick}>Logout</button> {/* New logout button */}
       {message && <p>{message}</p>}
       
-      {showOverview && <OverviewComponent />} {/* Conditionally render OverviewComponent */}
+      {showOverview && <OverviewComponent />}
     </div>
   );
 };

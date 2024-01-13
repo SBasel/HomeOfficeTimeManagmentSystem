@@ -21,7 +21,7 @@ const LoginComponent = ({ onLoginSuccess }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3030/login",
+        "http://localhost:3000/login",
         { personalid, password },
         { withCredentials: true }
       );
