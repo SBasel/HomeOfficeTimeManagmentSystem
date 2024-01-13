@@ -48,7 +48,7 @@ PASSWORD: {DEIN_PASSWORT}
 
 ### MySQL
 
-HomeOfficeTimeManagmentSystem.sql in MySQL Importieren
+HomeOfficeTimeManagmentSystem.sql in MySQL importieren.
 
 Die app.use("/add", add); kann man in z.b Postman nutzen um einen
 Mitarbeiter zuerstellen.
